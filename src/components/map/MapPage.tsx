@@ -32,6 +32,9 @@ export default class MapPage extends Component<Props, State> {
 
             let color = 'rgba(255, 255, 255, 0.8)';
             switch (node.zone) {
+              case "black":
+                color = 'rgba(0, 0, 0, 1)';
+                break;
               case "red":
                 color = 'rgba(255, 0, 0, 1)';
                 break;
@@ -49,7 +52,10 @@ export default class MapPage extends Component<Props, State> {
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
             switch (node.zone) {
-              case "red":
+               case "black":
+                color = 'rgba(255, 255, 255, 1)';
+                break;
+            case "red":
                 color = 'rgba(0, 0, 0, 1)';
                 break;
               case "blue":
