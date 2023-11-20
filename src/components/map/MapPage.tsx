@@ -77,6 +77,11 @@ export default class MapPage extends Component<Props, State> {
             node.fy = node.y;
             node.fz = node.z;
           }}
+          onNodeRightClick={(node) => {
+            node.fx = undefined;
+            node.fy = undefined;
+            node.fz = undefined;
+          }}
         />
       </div>
     )
